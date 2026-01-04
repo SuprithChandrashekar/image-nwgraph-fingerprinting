@@ -177,18 +177,6 @@ The pipeline generates:
 - Min-cut partitions
 - Anomaly node highlighting (Phase 4)
 
-## GUI Application
-
-A Streamlit-based GUI is available for running the pipeline and visualizing results.
-
-```bash
-# Install GUI dependencies
-pip install -r requirements-gui.txt
-
-# Run the App
-streamlit run apps/gui/app.py
-```
-
 ## Development & Testing
 
 This project uses `pytest` for testing and `ruff`/`black` for code quality.

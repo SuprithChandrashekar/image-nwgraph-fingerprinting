@@ -21,7 +21,6 @@ A modular Python pipeline for **superpixel-based image segmentation** and **Regi
 - [Project Structure](#-project-structure)
 - [Pipeline Phases](#-pipeline-phases)
 - [Configuration](#-configuration)
-- [GUI Application](#-gui-application)
 - [CLI Usage](#-cli-usage)
 - [Outputs](#-outputs)
 - [Development](#-development)
@@ -52,7 +51,7 @@ This package implements a **four-phase pipeline** for analyzing images using sup
 - 🤖 **AI-Powered Insights** - Anomaly detection, reasoning, GNN support
 - 💾 **Smart Caching** - Automatic caching of expensive operations
 - 📁 **Multi-Format Export** - CSV, Parquet, GraphML, JSON
-- 🖥️ **Streamlit GUI** - Interactive web interface
+- � **Jupyter Notebooks** - Interactive analysis and visualization
 - ⚡ **CLI Interface** - Command-line automation
 - ✅ **Tested & Quality** - pytest, ruff, black, GitHub Actions CI
 
@@ -117,9 +116,6 @@ pip install -r superpixel_rag/requirements.txt
 # Optional: Louvain community detection
 pip install python-louvain
 
-# Optional: GUI application
-pip install -r requirements-gui.txt
-
 # Optional: Development tools
 pip install -r requirements-dev.txt
 ```
@@ -182,13 +178,14 @@ python -m superpixel_rag.main --n-segments 300 --compactness 15 --output ./resul
 python -m superpixel_rag.main --enable-phase4
 ```
 
-### Option 3: GUI Application
+### Option 3: Jupyter Notebooks
 
 ```bash
-streamlit run apps/gui/app.py
+cd notebooks
+jupyter notebook pipeline_viewer.ipynb
 ```
 
-Then open http://localhost:8501 in your browser.
+Explore the interactive comparative analysis of original vs AI-generated images.
 
 ---
 
@@ -216,14 +213,12 @@ superpixel-rag-analysis/
 │   ├── ai_export.py          # Dataset export utilities
 │   │
 │   ├── main.py               # CLI entry point
+│   ├── spectral_clustering.py # Fiedler vector analysis
 │   └── requirements.txt      # Core dependencies
 │
-├── apps/
-│   └── gui/                  # Streamlit GUI application
-│       ├── app.py            # Main app entry
-│       ├── components/       # Reusable UI components
-│       ├── pages/            # Multi-page app pages
-│       └── assets/           # Static assets
+├── notebooks/                # Jupyter notebooks
+│   ├── pipeline_viewer.ipynb # Main comparative analysis
+│   └── network_graph_comparison.ipynb
 │
 ├── tests/                    # Test suite
 │   ├── conftest.py           # Pytest fixtures
@@ -243,7 +238,6 @@ superpixel-rag-analysis/
 ├── pyproject.toml            # Project metadata
 ├── pytest.ini                # Pytest configuration
 ├── requirements-dev.txt      # Development dependencies
-├── requirements-gui.txt      # GUI dependencies
 └── README.md                 # This file
 ```
 
@@ -334,29 +328,7 @@ config.show_plots = False
 
 ---
 
-## 🖥️ GUI Application
-
-The Streamlit-based GUI provides an interactive interface for:
-
-- **Running the Pipeline**: Upload images and configure parameters
-- **Viewing Results**: Browse segmentation overlays and graphs
-- **Graph Analysis**: Explore centrality, communities, paths
-- **AI Insights**: View anomalies and reasoning summaries
-- **Exports**: Download all generated files
-
-### Running the GUI
-
-```bash
-# Install GUI dependencies
-pip install -r requirements-gui.txt
-
-# Start the application
-streamlit run apps/gui/app.py
-```
-
----
-
-## 💻 CLI Usage
+##  CLI Usage
 
 ```bash
 # Basic usage
