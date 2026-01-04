@@ -40,7 +40,7 @@ This package implements a **four-phase pipeline** for analyzing images using sup
 | **3** | Analysis | Centrality measures, community detection, shortest paths, MST, min-cut |
 | **4** | AI Layer | Graph reasoning, anomaly detection, GNN training, LLM hooks |
 
-![Pipeline Overview](docs/pipeline_overview.png)
+> 📌 See the [pipeline_viewer.ipynb](notebooks/pipeline_viewer.ipynb) notebook for interactive visualizations of each phase.
 
 ---
 
@@ -480,14 +480,17 @@ This project uses GitHub Actions for continuous integration. On every push:
 
 ## 📊 Sample Results
 
-### Superpixel Segmentation
-![Segmentation Example](docs/segmentation_example.png)
+For interactive visualizations and comparative analysis results, see the **[pipeline_viewer.ipynb](notebooks/pipeline_viewer.ipynb)** notebook, which includes:
 
-### Community Detection
-![Community Detection](docs/community_example.png)
+| Analysis | Description |
+|----------|-------------|
+| **Superpixel Segmentation** | RAG overlay on original vs AI-generated images |
+| **Community Detection** | Louvain community clustering visualization |
+| **Spectral Clustering** | Fiedler vector bipartition analysis |
+| **Centrality Analysis** | Betweenness centrality comparison |
+| **Anomaly Detection** | Structural anomaly identification |
 
-### Anomaly Detection
-![Anomaly Detection](docs/anomaly_example.png)
+> 💡 Run the notebook locally or view it on GitHub to see all visualizations.
 
 ---
 
