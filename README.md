@@ -15,6 +15,7 @@ A modular Python pipeline for **superpixel-based image segmentation** and **Regi
 
 - [Overview](#-overview)
 - [Features](#-features)
+- [Interactive Notebooks](#-interactive-notebooks)
 - [Installation](#-installation)
 - [Quick Start](#-quick-start)
 - [Project Structure](#-project-structure)
@@ -57,7 +58,30 @@ This package implements a **four-phase pipeline** for analyzing images using sup
 
 ---
 
-## 🚀 Installation
+## � Interactive Notebooks
+
+Explore the analysis through our Jupyter notebooks:
+
+| Notebook | Description |
+|----------|-------------|
+| **[pipeline_viewer.ipynb](notebooks/pipeline_viewer.ipynb)** | **Main comparative analysis notebook** - Side-by-side comparison of original vs AI-generated images with executive inferences, spectral clustering (Fiedler vector), community detection, centrality analysis, and anomaly detection |
+| [network_graph_comparison.ipynb](notebooks/network_graph_comparison.ipynb) | Network graph visualization and comparison utilities |
+
+### Quick Start with Notebooks
+
+```bash
+# Navigate to notebooks directory
+cd notebooks
+
+# Launch Jupyter
+jupyter notebook pipeline_viewer.ipynb
+```
+
+> **📌 Recommended**: Start with `pipeline_viewer.ipynb` for the complete comparative analysis of original histopathology images vs AI-generated images (GPT and Gemini).
+
+---
+
+## �🚀 Installation
 
 ### Prerequisites
 
