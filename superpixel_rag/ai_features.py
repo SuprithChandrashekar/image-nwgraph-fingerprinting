@@ -160,16 +160,16 @@ def build_feature_matrices(
     edge_feature_cols = X_edges_df.columns.tolist()
     
     # Build edge_index_pairs (u_idx, v_idx)
-    edge_index_pairs = []
+    edge_index_list = []
     for _, row in edge_df.iterrows():
         u, v = int(row['source']), int(row['target'])
         if u in node_index and v in node_index:
-            edge_index_pairs.append([node_index[u], node_index[v]])
+            edge_index_list.append([node_index[u], node_index[v]])
         else:
             # This shouldn't happen if aligned, but good to be safe
             pass
             
-    edge_index_pairs = np.array(edge_index_pairs, dtype=np.int64)
+    edge_index_pairs = np.array(edge_index_list, dtype=np.int64)
     
     return X_nodes, node_index, node_feature_cols, X_edges, edge_index_pairs, edge_feature_cols
 

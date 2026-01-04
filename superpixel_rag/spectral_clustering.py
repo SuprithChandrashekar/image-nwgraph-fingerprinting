@@ -32,9 +32,9 @@ def compute_laplacian(G: nx.Graph, normalized: bool = False) -> np.ndarray:
         Laplacian matrix as numpy array
     """
     if normalized:
-        return nx.normalized_laplacian_matrix(G).toarray()
+        return np.array(nx.normalized_laplacian_matrix(G).toarray())
     else:
-        return nx.laplacian_matrix(G).toarray()
+        return np.array(nx.laplacian_matrix(G).toarray())
 
 
 def compute_fiedler_vector(G: nx.Graph, normalized: bool = False) -> Tuple[float, np.ndarray, List]:

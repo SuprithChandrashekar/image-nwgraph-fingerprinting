@@ -20,7 +20,7 @@ except ImportError:
 
 logger = logging.getLogger(__name__)
 
-class GCN(torch.nn.Module if TORCH_AVAILABLE else object):
+class GCN(torch.nn.Module if TORCH_AVAILABLE else object):  # type: ignore
     def __init__(self, num_features, num_classes, hidden_channels=64):
         super().__init__()
         self.conv1 = GCNConv(num_features, hidden_channels)

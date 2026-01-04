@@ -57,7 +57,7 @@ class ExportManager:
         run_dir = self.output_dir / run_id
         run_dir.mkdir(exist_ok=True)
         
-        manifest = {
+        manifest: Dict[str, Any] = {
             "run_id": run_id,
             "timestamp": datetime.now().isoformat(),
             "config_hash": self._get_config_hash(),
@@ -177,6 +177,8 @@ class ExportManager:
     def _export_ai(self, bundle: GraphBundle, out_dir: Path, manifest: Dict):
         """Export Phase 4 AI results."""
         res = bundle.phase4_results
+        if res is None:
+            return
         
         # Digest
         if res.reasoning_report:

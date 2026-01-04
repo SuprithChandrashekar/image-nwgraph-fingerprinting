@@ -13,7 +13,7 @@ import networkx as nx
 from skimage import io, segmentation, color
 
 try:
-    from skimage.future import graph  # For older versions
+    from skimage.future import graph  # type: ignore # For older versions
 except ImportError:
     from skimage import graph  # For skimage >=0.20
 
@@ -31,6 +31,7 @@ class SegmentationResult:
     centroids: Dict[int, Tuple[float, float]]
     title: str = ""
     image_id: str = ""
+    image_path: str = ""
 
 
 class Phase1Segmentation:
@@ -75,7 +76,7 @@ class Phase1Segmentation:
         img = io.imread(path)
         print(f"Loaded image from: {path}")
         print(f"  Shape: {img.shape}, dtype: {img.dtype}")
-        return img
+        return np.array(img)
     
     def segment_slic(self, image: np.ndarray) -> np.ndarray:
         """
@@ -100,7 +101,7 @@ class Phase1Segmentation:
         )
         n_superpixels = labels.max() + 1
         print(f"SLIC segmentation: {n_superpixels} superpixels")
-        return labels
+        return np.array(labels)
     
     def build_rag(self, image: np.ndarray, labels: np.ndarray) -> nx.Graph:
         """
@@ -258,7 +259,7 @@ class Phase1Segmentation:
         np.ndarray
             Image with superpixel average colors.
         """
-        return color.label2rgb(labels, image, kind='avg')
+        return np.array(color.label2rgb(labels, image, kind='avg'))
     
     @staticmethod
     def get_boundary_image(image: np.ndarray, labels: np.ndarray) -> np.ndarray:
@@ -277,4 +278,4 @@ class Phase1Segmentation:
         np.ndarray
             Image with boundaries marked.
         """
-        return segmentation.mark_boundaries(image, labels)
+        return np.array(segmentation.mark_boundaries(image, labels))

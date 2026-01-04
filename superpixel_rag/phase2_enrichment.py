@@ -167,7 +167,7 @@ class Phase2Enrichment:
         mean_u = gray[boundary_u].mean()
         mean_v = gray[boundary_v].mean()
         
-        return abs(mean_u - mean_v)
+        return float(abs(mean_u - mean_v))
     
     def compute_edge_weights(
         self,

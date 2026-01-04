@@ -2,6 +2,7 @@ import logging
 import time
 from pathlib import Path
 from typing import Optional
+import numpy as np
 
 from .config import Config
 from .data import GraphBundle
@@ -37,7 +38,7 @@ class Pipeline:
             dpi=config.figure_dpi
         )
         
-    def run(self, image_path: str, title: str = None, use_cache: bool = True) -> GraphBundle:
+    def run(self, image_path: str, title: Optional[str] = None, use_cache: bool = True) -> GraphBundle:
         """
         Run the full pipeline on an image.
         
@@ -145,7 +146,7 @@ class Pipeline:
                         bundle.image,
                         bundle.labels,
                         p4_res.anomaly_df,
-                        centroids_list,
+                        np.array(centroids_list),
                         title=f"{bundle.title} - Top Anomalies",
                         save_name=f"{bundle.image_id}_phase4_anomalies"
                     )
@@ -161,7 +162,7 @@ class Pipeline:
         
         return bundle
 
-def run_pipeline(config: Config, image_path: str, title: str = None, use_cache: bool = True) -> GraphBundle:
+def run_pipeline(config: Config, image_path: str, title: Optional[str] = None, use_cache: bool = True) -> GraphBundle:
     """
     Helper function to run the pipeline.
     """
