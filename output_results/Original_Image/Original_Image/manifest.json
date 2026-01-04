@@ -1,0 +1,23 @@
+{
+  "run_id": "Original_Image",
+  "timestamp": "2026-01-01T22:10:57.635963",
+  "config_hash": "8264848bcd68106fd30d5a7990c7494e",
+  "image_path": "",
+  "title": "Original_Image",
+  "paths": {
+    "original_image": "",
+    "nodes_csv": "Original_Image\\nodes.csv",
+    "edges_csv": "Original_Image\\edges.csv",
+    "rag_graphml": "Original_Image\\rag.graphml",
+    "centrality_csv": "Original_Image\\centrality.csv",
+    "communities_csv": "Original_Image\\communities.csv",
+    "phase4_digest_json": "Original_Image\\phase4_digest.json",
+    "phase4_exec_summary_txt": "Original_Image\\phase4_exec_summary.txt",
+    "anomalies_csv": "Original_Image\\anomalies.csv"
+  },
+  "status": {
+    "has_phase4": true,
+    "has_mincut": false,
+    "has_gnn": false
+  }
+}

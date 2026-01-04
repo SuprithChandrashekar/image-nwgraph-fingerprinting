@@ -1,0 +1,140 @@
+# ===========================
+# Python
+# ===========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ===========================
+# Virtual Environments
+# ===========================
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.conda/
+
+# ===========================
+# IDE & Editors
+# ===========================
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.spyderproject
+.spyproject
+*.sublime-project
+*.sublime-workspace
+
+# ===========================
+# Jupyter Notebooks
+# ===========================
+.ipynb_checkpoints/
+*.ipynb
+
+# ===========================
+# Testing & Coverage
+# ===========================
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# ===========================
+# Cache & Temp Files
+# ===========================
+cache/
+.cache/
+*.log
+*.tmp
+*.temp
+nul
+
+# ===========================
+# Output & Generated Files
+# ===========================
+output/
+outputs/
+results/
+*.graphml
+*.parquet
+rag_*.csv
+rag*.graphml
+
+# ===========================
+# Data & Assets (keep samples)
+# ===========================
+# Exclude large image directories but keep sample images
+# Gemini Nano Banana/
+# GPT Image Gen/
+
+# ===========================
+# OS-specific
+# ===========================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ===========================
+# Project-specific
+# ===========================
+# Old/deprecated files
+README_REFACTOR.md
+run_analysis.py
+run_phase4.py
+
+# Experimental/Generated image directories
+Gemini Nano Banana/
+GPT Image Gen/
+GPT_gen_1/
+
+# Model checkpoints
+*.pt
+*.pth
+*.ckpt
+checkpoints/
+
+# Large data files
+*.npy
+*.npz
+!tests/**/*.npy
+
+# Secrets & API keys
+.env.local
+.env.*.local
+secrets.json
+api_keys.json

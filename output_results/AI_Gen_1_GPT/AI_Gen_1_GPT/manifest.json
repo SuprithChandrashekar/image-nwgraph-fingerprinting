@@ -1,0 +1,23 @@
+{
+  "run_id": "AI_Gen_1_GPT",
+  "timestamp": "2026-01-01T22:11:02.925561",
+  "config_hash": "9c151315135aab269bb4a0207e0059bd",
+  "image_path": "",
+  "title": "AI_Gen_1_GPT",
+  "paths": {
+    "original_image": "",
+    "nodes_csv": "AI_Gen_1_GPT\\nodes.csv",
+    "edges_csv": "AI_Gen_1_GPT\\edges.csv",
+    "rag_graphml": "AI_Gen_1_GPT\\rag.graphml",
+    "centrality_csv": "AI_Gen_1_GPT\\centrality.csv",
+    "communities_csv": "AI_Gen_1_GPT\\communities.csv",
+    "phase4_digest_json": "AI_Gen_1_GPT\\phase4_digest.json",
+    "phase4_exec_summary_txt": "AI_Gen_1_GPT\\phase4_exec_summary.txt",
+    "anomalies_csv": "AI_Gen_1_GPT\\anomalies.csv"
+  },
+  "status": {
+    "has_phase4": true,
+    "has_mincut": false,
+    "has_gnn": false
+  }
+}

@@ -1,0 +1,6 @@
+The image analysis graph contains 69 superpixel nodes and 89 edges. The structure exhibits 1 connected components with an average degree of 2.58. Community detection identified 9 distinct regions, suggesting significant structural segmentation.
+
+Value:
+- Granular segmentation with 69 regions.
+- Identified 9 major structural communities.
+- Graph connectivity analysis complete.

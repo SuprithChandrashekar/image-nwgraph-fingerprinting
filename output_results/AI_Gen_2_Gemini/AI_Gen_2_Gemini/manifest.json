@@ -1,0 +1,23 @@
+{
+  "run_id": "AI_Gen_2_Gemini",
+  "timestamp": "2026-01-01T22:11:05.090381",
+  "config_hash": "ac744ad63684733fc557403d43b75feb",
+  "image_path": "",
+  "title": "AI_Gen_2_Gemini",
+  "paths": {
+    "original_image": "",
+    "nodes_csv": "AI_Gen_2_Gemini\\nodes.csv",
+    "edges_csv": "AI_Gen_2_Gemini\\edges.csv",
+    "rag_graphml": "AI_Gen_2_Gemini\\rag.graphml",
+    "centrality_csv": "AI_Gen_2_Gemini\\centrality.csv",
+    "communities_csv": "AI_Gen_2_Gemini\\communities.csv",
+    "phase4_digest_json": "AI_Gen_2_Gemini\\phase4_digest.json",
+    "phase4_exec_summary_txt": "AI_Gen_2_Gemini\\phase4_exec_summary.txt",
+    "anomalies_csv": "AI_Gen_2_Gemini\\anomalies.csv"
+  },
+  "status": {
+    "has_phase4": true,
+    "has_mincut": false,
+    "has_gnn": false
+  }
+}
