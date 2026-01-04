@@ -53,7 +53,8 @@ venv.bak/
 # Jupyter Notebooks
 # ===========================
 .ipynb_checkpoints/
-*.ipynb
+# Track notebooks in notebooks/ folder
+!notebooks/*.ipynb
 
 # ===========================
 # Testing & Coverage
